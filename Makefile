@@ -20,3 +20,6 @@ run_setup:
 
 download_setup_log:
 	bash scripts/download_setup_log.sh
+
+restart_airflow:
+	yc compute instance restart airflow-vm

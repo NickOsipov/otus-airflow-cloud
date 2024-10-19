@@ -38,7 +38,7 @@ default_args = {
 
 # [START instantiate_dag]
 with DAG(
-    'a_simple_tutorial',
+    'a_simple_tutorial_2',
     default_args=default_args,
     description='A simple tutorial DAG',
     schedule_interval=timedelta(days=1),

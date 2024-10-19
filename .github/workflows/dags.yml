@@ -8,6 +8,7 @@ on:
 
 env:
   AIRFLOW_DAGS_FOLDER: /home/airflow/dags
+  LOCAL_DAGS_FOLDER: airflow/dags
 
 jobs:
   deploy:
@@ -22,7 +23,7 @@ jobs:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "dags/*"
+          source: "{{ env.LOCAL_DAGS_FOLDER }}/*"
           target: "${{ env.AIRFLOW_DAGS_FOLDER }}"
           strip_components: 1
 
