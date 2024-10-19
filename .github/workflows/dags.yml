@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'dags/**'
+      - 'airflow/dags/**'
 
 env:
   AIRFLOW_DAGS_FOLDER: /home/airflow/dags
